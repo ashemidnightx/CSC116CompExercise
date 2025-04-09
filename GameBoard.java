@@ -2,6 +2,7 @@
 * The creation of the game board
 *
 * @author Bayley Schaefer
+* @author Vanitas Smith-Debnam
 */
 public class GameBoard {
 
