@@ -3,6 +3,7 @@
 *
 * @author Bayley Schaefer
 * @author Vanitas Smith-Debnam
+* @author Alexis Nguyen
 */
 public class GameBoard {
 
