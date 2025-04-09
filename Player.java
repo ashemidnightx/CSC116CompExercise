@@ -2,6 +2,7 @@
 * The Player that is going
 *
 * @author Bayley Schaefr
+* @author Vanitas Smith-Debnam
 * @author Alexis Nguyen
 */
 public class Player {
