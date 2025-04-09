@@ -1,14 +1,34 @@
-// ConnectFourGame.java
 import java.util.Scanner;
 
+/**
+* The Connect Four Game which iterates through each player
+*
+* @author Bayley Schaefer
+*/
 public class ConnectFourGame {
+
+    /** The max number of pieces on the board */
     public static final int MAX_PIECES = 64;
+
+    /** The Game board */
     private GameBoard board;
+
+    /** The player X */
     private Player playerX;
+
+    /** The player O */
     private Player playerO;
+
+    /** Total moves done by both players */
     private int totalMoves;
+
+    /** If the game is over */
     private boolean gameOver;
 
+    /**
+    * Constructor of class
+    * Initializes all instance variables
+    */
     public ConnectFourGame() {
         this.board = new GameBoard();
         this.playerX = new Player('X');
@@ -17,6 +37,9 @@ public class ConnectFourGame {
         this.gameOver = false;
     }
 
+    /**
+    * Scans through user input to play game
+    */
     public void playGame() {
         Scanner in = new Scanner(System.in);
         Player currentPlayer = playerX;
@@ -71,7 +94,7 @@ public class ConnectFourGame {
 
         in.close();
     }
-
+}
     public static void main(String[] args) {
         ConnectFourGame game = new ConnectFourGame();
         game.playGame();
