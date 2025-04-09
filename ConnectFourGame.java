@@ -5,6 +5,7 @@ import java.util.Scanner;
 *
 * @author Bayley Schaefer
 * @author Vanitas Smith-Debnam
+* @author Alexis Nguyen
 */
 public class ConnectFourGame {
 
