@@ -4,6 +4,7 @@ import java.util.Scanner;
 * The Connect Four Game which iterates through each player
 *
 * @author Bayley Schaefer
+* @author Vanitas Smith-Debnam
 */
 public class ConnectFourGame {
 
