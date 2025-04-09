@@ -26,7 +26,7 @@ public class ConnectFourGame {
     private boolean gameOver;
 
     /**
-    * Constructor of class
+    * Constructor of the class
     * Initializes all instance variables
     */
     public ConnectFourGame() {
@@ -94,7 +94,11 @@ public class ConnectFourGame {
 
         in.close();
     }
-}
+
+    /**
+    * Plays the Connect Four game
+    * @param command-line args not used
+    */
     public static void main(String[] args) {
         ConnectFourGame game = new ConnectFourGame();
         game.playGame();
