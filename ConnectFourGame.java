@@ -118,7 +118,7 @@ public class ConnectFourGame {
 
     /**
     * Plays the Connect Four game
-    * @param command-line args not used
+    * @param args not used
     */
     public static void main(String[] args) {
         ConnectFourGame game = new ConnectFourGame();
@@ -128,6 +128,7 @@ public class ConnectFourGame {
     /**
     * Checks if the string is an integer
     * @param str the String being parsed
+    * @return if string is integer
     */
     private boolean isInt(String str) {
         for(int i = 0; i < str.length(); i++)
