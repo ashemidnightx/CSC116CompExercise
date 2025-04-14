@@ -2,8 +2,6 @@
 * The Player that is going
 *
 * @author Bayley Schaefr
-* @author Vanitas Smith-Debnam
-* @author Alexis Nguyen
 */
 public class Player {
 
@@ -38,8 +36,6 @@ public class Player {
 
     /**
     * Increments the number of pieces placed
-    * 
-    * @return piecesPlaced Total number of pieces placed
     */
     public void incrementPiecesPlaced() {
         piecesPlaced++;
@@ -48,7 +44,7 @@ public class Player {
     /**
     * Gets the number of pieces placed
     *
-    * @reutrn piecesPlaced Total number of pieces placed
+    * @return piecesPlaced Total number of pieces placed
     */
     public int getPiecesPlaced() {
         return piecesPlaced;
@@ -57,7 +53,7 @@ public class Player {
     /**
     * Updates the max number of consecutive connections
     *
-    * @returns if the number of newly connected is more than the old connected
+    * @param connected the maximumn connected before
     */
     public void updateMaxConnected(int connected) {
         if (connected > maxConnected) {
