@@ -106,6 +106,7 @@ public class ConnectFourGame {
         }
 
         if (totalMoves == MAX_PIECES && !gameOver) {
+            board.display();
             System.out.println("Game ended in a draw!");
         }
 
