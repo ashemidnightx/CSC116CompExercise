@@ -43,6 +43,9 @@ public class ConnectFourGame {
     * Scans through user input to play game
     */
     public void playGame() {
+        int column;
+        String input;
+
         Scanner in = new Scanner(System.in);
         Player currentPlayer = playerX;
 
@@ -53,10 +56,26 @@ public class ConnectFourGame {
             System.out.println("X: " + playerX.getMaxConnected());
             System.out.println("O: " + playerO.getMaxConnected());
 
-            int column = in.nextInt();
-            while (!board.validateColumn(column)) {
-                System.out.println("Invalid column. Choose a column between 1-8");
-                column = in.nextInt();
+            input = in.next();
+
+            while(!isInt(input)) {
+                System.out.println("Invalid input. Must be an integer.");
+                input = in.next();
+            }
+
+            column = Integer.parseInt(input);
+
+            while(!isInt(input) || !board.validateColumn(column)) {
+                if(!isInt(input)) {
+                    System.out.println("Invalid input. Must be an integer.");
+                    input = in.next();
+                } else if (!board.validateColumn(column)){
+                    System.out.println("Invalid column. Choose a column between 1-8");
+                    input = in.next();
+                }
+                if(isInt(input)) {
+                    column = Integer.parseInt(input);
+                }
             }
 
             while (!board.placePiece(column, currentPlayer.getSymbol())) {
@@ -104,5 +123,20 @@ public class ConnectFourGame {
     public static void main(String[] args) {
         ConnectFourGame game = new ConnectFourGame();
         game.playGame();
+    }
+
+    /**
+    * Checks if the string is an integer
+    * @param str the String being parsed
+    */
+    private boolean isInt(String str) {
+        for(int i = 0; i < str.length(); i++)
+        {
+            if ((!Character.isDigit(str.charAt(i)))) 
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
