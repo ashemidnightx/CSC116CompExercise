@@ -55,6 +55,8 @@ public class GameBoard {
     /**
     * Places a player (X/O) into the bottommost open space of a column
     *
+    * @param column that the piece is being placed
+    * @param player that is going
     * @return true if the piece was successfully placed
     */
     public boolean placePiece(int column, char player) {
@@ -71,6 +73,7 @@ public class GameBoard {
     /**
     * Checks if column is positive and less than 9
     *
+    * @param column that is being validated
     * @return true if column is valud
     */
     public boolean validateColumn(int column) {
@@ -79,6 +82,9 @@ public class GameBoard {
 
     /**
     * Checks if the player won (has 4 connected pieces)
+    *
+    * @param player the player going
+    * @return if the player won
     */
     public boolean isWinner(char player) {
         return checkConnections(player) >= MAX_CONNECT;
