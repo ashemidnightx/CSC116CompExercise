@@ -3,6 +3,7 @@
 *
 * @author Bayley Schaefr
 * @author Alexis Nguyen
+* @author Vanitas Smith-Debnam
 */
 public class Player {
 
@@ -80,3 +81,4 @@ public class Player {
         maxConnected = 0;
     }
 }
+
